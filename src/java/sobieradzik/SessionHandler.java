@@ -34,7 +34,7 @@ public class SessionHandler {
         Future<Void> future = session.getAsyncRemote().sendText(message);
         //try {
             //session.getBasicRemote().sendText(message);
-            System.out.println("Message to " + session.getId() + ":->roomID="+ session.getUserProperties().get("roomID") + "; " + message);
+            System.out.println("Message to (RW) " + session.getId() + ":->roomID="+ session.getUserProperties().get("roomID") + "; " + message);
         //} catch (IOException ex) {
         //    sessions.remove(session);
         //    Logger.getLogger(SessionHandler.class.getName()).log(Level.SEVERE, null, ex);
