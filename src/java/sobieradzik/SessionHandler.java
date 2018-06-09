@@ -5,6 +5,7 @@
  */
 package sobieradzik;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -47,9 +48,22 @@ public class SessionHandler {
     }
 
     public static void sendToAllConnectedSessionsInRoom(String roomID, String message) {
+//        try
+//        {
+//            String filename= "c:\\!\\MyFile.txt";
+//            FileWriter fw = new FileWriter(filename,true); //the true will append the new data
+//            fw.write(message+"\n");//appends the string to the file
+//            fw.close();
+//        }
+//        catch(IOException ioe)
+//        {
+//            System.err.println("IOException: " + ioe.getMessage());
+//            message += ioe.getMessage();
+//        }
         for (Session session : sessions) {
             if (session.getUserProperties().get("roomID").equals(roomID))
                 sendToSession(session, message);
         }
+        
     }
 }
