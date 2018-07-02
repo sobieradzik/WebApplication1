@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <p> welcome from gitRW</p>
+        <p> welcome from git RW</p>
         <div>
             <p>Room ID: <input type="text" id="id" value="1"/></p>
             <p>Message: <input type="text" id="messageinput"/></p>
@@ -38,8 +38,9 @@ and open the template in the editor.
                     return;
                 }
                 // Create a new instance of the websocket
-                writeResponse("<b>Trying to connect to:</b> ws://localhost:8080/EchoChamber/echo/{"+document.getElementById("id").value+"}");
+                //writeResponse("<b>Trying to connect to:</b> ws://localhost:8080/EchoChamber/echo/{"+document.getElementById("id").value+"}");
                 //webSocket = new WebSocket("ws://localhost:8080/EchoChamber/echo/{"+document.getElementById("id").value+"}");
+                writeResponse("<b>Trying to connect to:</b> ws://nowawebapp.azurewebsites.net/EchoChamber/echo/{"+document.getElementById("id").value+"}");
                 webSocket = new WebSocket("ws://nowawebapp.azurewebsites.net/EchoChamber/echo/{"+document.getElementById("id").value+"}");
                  
                 /**
